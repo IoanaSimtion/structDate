@@ -69,7 +69,7 @@ int main()
   
     cout << endl << endl;*/
 
-    cout << "Lista: " << endl << endl;
+    /*cout << "Lista: " << endl << endl;
 
     x.afisare();
 
@@ -77,6 +77,38 @@ int main()
     
     cout << "Size: " << x.size();
 
-    cout << endl << endl;
+    cout << endl << endl;*/
    
+
+   /* cout << "INAINTE: " << endl << endl;
+
+    x.afisare();
+
+    cout << endl << endl;
+
+    cout << "DUPA:" << endl << endl;
+
+    x.setareValoarePoz(2, 5555);
+
+    x.afisare();
+
+    cout << endl << endl;*/
+    
+    
+    //sort
+    
+    cout << "INAINTE: " << endl << endl;
+
+    x.afisare();
+
+    cout << endl << endl;
+
+    cout << "DUPA:" << endl << endl;
+
+    x.sortCrescator();
+
+    x.afisare();
+
+    cout << endl << endl;
+
 }
