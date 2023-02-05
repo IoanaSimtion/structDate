@@ -155,5 +155,58 @@ struct Lista{
 		}
 		return ct;
 	}
+
+	//functie ce seteaza pe o anumita pozitie o valoare noua
+
+	void setareValoarePoz(int poz, int data) {
+		Node* aux = head;
+		int ct = 0;
+
+		while (aux->next != NULL && ct != poz) {
+			aux = aux->next;
+			ct++;
+		}
+
+		aux->data = data;
+	}
+
+
+	//functie ce sorteaza lista crescator
+
+	void sortCrescator() {
 		
+		bool flag = 0;
+
+		do {
+
+			Node* aux = head;
+
+			flag = 1;
+
+			for (int i = 0; i < size() - 1; i++) {
+
+				if (aux->data > aux->next->data) {
+
+					int data = aux->data;
+
+					setareValoarePoz(i, aux->next->data);
+
+					setareValoarePoz(i + 1, data);
+
+					flag = 0;
+
+				}
+
+				aux = aux->next;
+			}
+
+		} while (flag == 0);
+	}
+
+
+	Node* iterator() {
+
+		return this->head;
+	}
+						
 };
