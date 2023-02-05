@@ -1,6 +1,5 @@
-//#include "lista.h"
-//#include "exercitii.h";
-#include "tema.h"
+#include "lista.h"
+#include "exercitii.h";
 
 int main()
 {
@@ -137,10 +136,8 @@ int main()
 
     //TEMA
 
-    sol2();
     
-//cout << ePatratPerfect(cifrMijloc(1641));
 
-    //cout << ePalindrom(1221);
+
 
 }
