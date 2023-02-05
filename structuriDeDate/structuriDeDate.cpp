@@ -1,23 +1,24 @@
 #include "lista.h"
+#include "exercitii.h";
 
 int main()
 {
 
-    Lista x;
+    //Lista x;
 
-    x.addStart(12);
-    x.addStart(1);
-    x.addStart(1234);
-    x.addStart(5);
+    //x.addStart(12);
+    //x.addStart(1);
+    //x.addStart(1234);
+    //x.addStart(5);
 
 
-    //cout << x.head->next->data;
+    ////cout << x.head->next->data;
 
-    
+    //
 
-    x.addSfarsit(89);
+    //x.addSfarsit(89);
 
-    x.addPozitie(2, 1000);
+    //x.addPozitie(2, 1000);
 
     //stergere start
 
@@ -97,7 +98,7 @@ int main()
     
     //sort
     
-    cout << "INAINTE: " << endl << endl;
+    /*cout << "INAINTE: " << endl << endl;
 
     x.afisare();
 
@@ -109,6 +110,31 @@ int main()
 
     x.afisare();
 
-    cout << endl << endl;
+    cout << endl << endl;*/
+
+
+
+
+
+
+    sol1();
+
+    //cout << ePrim(7);
+
+    //cout << primaUltimaCifra(12412);
+
+    //cout << rasturnat(1234);
+
+
+    //cout << eSuperprim(239);
+
+    //cout << ePrim(2);
+
+
+
+
+
+
+
 
 }

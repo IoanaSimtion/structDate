@@ -180,19 +180,33 @@ struct Lista{
 		do {
 
 			Node* aux = head;
+
 			flag = 1;
 
 			for (int i = 0; i < size() - 1; i++) {
+
 				if (aux->data > aux->next->data) {
+
 					int data = aux->data;
+
 					setareValoarePoz(i, aux->next->data);
+
 					setareValoarePoz(i + 1, data);
+
 					flag = 0;
+
 				}
+
 				aux = aux->next;
 			}
 
 		} while (flag == 0);
 	}
 
+
+	Node* iterator() {
+
+		return this->head;
+	}
+						
 };
