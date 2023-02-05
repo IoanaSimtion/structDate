@@ -114,10 +114,11 @@ int main()
 
 
 
+    //EXERCITII
 
 
 
-    sol1();
+    //sol1();
 
     //cout << ePrim(7);
 
@@ -133,7 +134,9 @@ int main()
 
 
 
+    //TEMA
 
+    
 
 
 

@@ -397,17 +397,13 @@ bool eSuperprim(int nr) {
 
 void afisareSuperprim(Lista lista) {
 
-	Node* aux = lista.iterator();
-
 	for (int i = lista.size() - 2; i >= 0; i--) {
 
-		if (eSuperprim(aux->data)) {
+		if (eSuperprim(lista.nodePoz(i)->data)) {
 
-			cout << aux->data << ' ';
-
+			cout << lista.nodePoz(i)->data << ' ';
+			
 		}
-
-		aux = aux->next;
 	}
 }
 
