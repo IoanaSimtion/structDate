@@ -174,15 +174,23 @@ int main()
 
     //sol43();
 
-    sol45();
+    //sol45();
 
 
+    //cout << cubPerfect(9);
+
+    //sol46();
+
+    //sol47();
+
+    
+     //cout << alipireCifre(-12, 32);
 
 
+    //sol36();
 
 
-
-
+    sol37();
 
     
 }

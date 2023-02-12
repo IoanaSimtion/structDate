@@ -329,9 +329,6 @@ void interclasare(Lista l1, Lista l2, Lista& l3) {
 
 
 
-
-
-
 void sol45() {
 
 	Lista x, y, z;
@@ -359,4 +356,391 @@ void sol45() {
 	z.afisare();
 
 	cout << endl << endl;
+}
+
+
+
+//exercitiul 46
+
+
+void citireListaCp(Lista& lista) {
+
+	ifstream f("listaCubPerfect.txt");
+
+	int n;
+
+	f >> n;
+
+	for (int i = 0; i < n; i++) {
+
+		int x;
+
+		f >> x;
+
+		lista.addSfarsit(x);
+
+	}
+
+}
+
+
+
+//todo functie ce verifica daca un numar este cub perfect
+
+
+bool cubPerfect(int n) {
+
+	int x = cbrt(n);
+
+	if (x * x * x == n) {
+
+		return true;
+
+	}
+
+	return false;
+
+}
+
+
+//todo functie ce returneaza prima aparitie a unui cub perfect 
+
+int pozPrimulCubPerf(Lista lista) {
+
+	Node* aux = lista.iterator();
+
+	for (int i = 0; i < lista.size(); i++) {
+
+		if (cubPerfect(aux->data)) {
+
+			return i;
+
+		}
+
+		aux = aux->next;
+
+	}
+
+	return -1;
+}
+
+
+//todo functie ce returneaza poz ultimului cub perfect
+
+int pozUltimulCubPerf(Lista lista) {
+
+	for (int i = lista.size() - 1; i >= 0; i--) {
+
+		if (cubPerfect(lista.nodePoz(i)->data)) {
+
+			return i;
+
+		}
+	}
+
+	return -1;
+}
+
+
+//todo functie ce sterge elementele cuprinse intre 2 poz
+
+void stergereElementePoz(Lista& lista, int poz1, int poz2) {
+
+	for (int j = poz1; j <= poz2; j++) {
+
+		lista.stergerePozitie(poz1);
+
+	}
+
+}
+
+
+
+void sol46() {
+
+	Lista x;
+
+	citireListaCp(x);
+
+	cout << "Lista" << endl << endl;
+
+	x.afisare();
+
+	cout << endl << endl;
+
+	cout << "Lista dupa stergerea elementelor cuprinse intre primul si ultimul cub perfect" << endl << endl;
+
+	stergereElementePoz(x, pozPrimulCubPerf(x), pozUltimulCubPerf(x));
+
+	x.afisare();
+
+	cout << endl << endl;
+
+}
+
+
+
+//exercitiul 47 
+
+
+
+//todo functie ce inverseaza elementele intre 2 poz date
+
+void inversareElemente(Lista& lista, int poz1, int poz2) {
+
+	for (int i = 0; i <= poz2 - poz1; i++) {
+
+		int aux = lista.nodePoz(poz1)->data;
+
+		lista.setareValoarePoz(poz1, lista.nodePoz(poz2)->data);
+
+		lista.setareValoarePoz(poz2, aux);
+
+		poz1++;
+
+		poz2--;
+
+	}
+
+}
+
+
+void sol47() {
+
+	Lista x;
+
+	citireListaCp(x);
+
+	cout << "Lista initiala: " << endl << endl;
+
+	x.afisare();
+
+	cout << endl << endl;
+
+	int m, i, j;
+
+	cout << "m=";
+	
+	cin >> m;
+
+	for (int i = 0; i < m; i++) {
+
+		cout << "Introduceti o pereche de indici: " << endl;
+
+		cin >> i >> j;
+
+		cout << "Lista obtinuta in urma rotirii elementelor cuprinse intre poz " << i << " si " << j << " este: " << endl << endl;
+
+		inversareElemente(x, i, j);
+
+		x.afisare();
+
+		cout << endl << endl;
+
+	}
+
+}
+
+
+
+//exercitiul 36
+
+
+
+//todo functie ce returneaza nr de cifre a unui nr
+
+int numarCifre(int n) {
+
+	int ct = 0;
+
+	while (n) {
+
+		n /= 10;
+
+		ct++;
+
+	}
+
+	return ct;
+
+}
+
+
+//todo functie ce returneaza nr obtinut din alipirea cifrelor a 2 nr
+
+int alipireCifre(int a, int b) {
+
+	if (a < 0) {
+
+		a = a * (-1);
+
+	}
+
+	if (b < 0) {
+
+		b = b * (-1);
+
+	}
+
+	return a * pow(10, numarCifre(b)) + b;
+
+}
+
+
+//todo functie ce insereaza in lista
+
+void inserare(Lista& lista) {
+
+	for (int i = 0; i < lista.size() - 1; i++) {
+
+		if (lista.nodePoz(i)->data < 0 && lista.nodePoz(i + 1)->data >= 0) {
+
+			lista.addPozitie(i + 1, alipireCifre(lista.nodePoz(i)->data, lista.nodePoz(i + 1)->data));
+
+			i++;
+		}
+
+	}
+
+}
+
+
+
+void sol36() {
+
+	Lista x;
+
+	int n;
+
+	citireLista2(x, n);
+
+	cout << "Lista initiala: " << endl << endl;
+
+	x.afisare();
+
+	cout << endl << endl;
+
+	cout << "Lista dupa inserare: " << endl << endl;
+
+	inserare(x);
+
+	x.afisare();
+
+	cout << endl << endl;
+
+
+}
+
+
+
+//exercitiul 38
+
+
+//todo functie ce returneaza nr max de subsiruri 
+
+
+
+
+//exercitiul 37
+
+
+void citireListaK(Lista& lista, int& k) {
+
+	ifstream f("listaStergere.txt");
+
+	int n;
+
+	f >> n;
+
+	f >> k;
+
+	for (int i = 0; i < 2 * n; i++) {
+
+		int x;
+
+		f >> x;
+
+		lista.addSfarsit(x);
+
+	}
+}
+
+
+//todo functie ce determina suma elementelor din lista
+
+int sumaElemente(Lista lista) {
+
+	int suma = 0;
+
+	for (int i = 0; i < lista.size(); i++) {
+
+		suma += lista.nodePoz(i)->data;
+
+	}
+
+	return suma;
+
+}
+
+
+
+//todo functie ce sterge elem din k in k
+
+void stergereK(Lista lista, int n, int poz1, int k) {
+
+	int j = 0;
+
+	for (int i = 0; i < n; i++) {
+
+		if (poz1 > n) {
+
+			poz1 = 0;
+
+		}
+
+		lista.stergerePozitie(poz1);
+
+		poz1 = poz1 + k;
+
+	}
+
+}
+
+
+//todo functie ce sterge elemente incepand cu o poz
+
+void stergereElemListaPoz(Lista lista) {
+
+
+
+}
+
+
+
+
+
+
+
+
+
+void sol37() {
+
+	Lista x;
+
+	int k;
+
+	citireListaK(x, k);
+
+	cout << "Lista: " << endl << endl;
+
+	x.afisare();
+
+	cout << endl << endl;
+
+	cout << "Lista dupa stergere: " << endl << endl;
+
+
+	
+
+
 }
