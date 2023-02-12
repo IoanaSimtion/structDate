@@ -1,6 +1,7 @@
-#include "lista.h"
-#include "exercitii.h";
-#include "tema.h";
+//#include "lista.h"
+//#include "exercitii.h";
+//#include "tema.h";
+#include "exercitii2.h";
 
 int main()
 {
@@ -163,4 +164,25 @@ int main()
     //cout << elemNou(1234);
 
 
+
+
+
+
+    //EXERCITII
+
+    //sol42();
+
+    //sol43();
+
+    sol45();
+
+
+
+
+
+
+
+
+
+    
 }
