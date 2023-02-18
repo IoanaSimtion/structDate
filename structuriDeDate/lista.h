@@ -1,5 +1,7 @@
 #pragma once
 #include"node.h"
+
+
 struct Lista{
 
 	Node* head=NULL;

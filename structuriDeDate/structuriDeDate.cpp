@@ -1,7 +1,10 @@
 //#include "lista.h"
 //#include "exercitii.h";
 //#include "tema.h";
-#include "exercitii2.h";
+//#include "exercitii2.h";
+//#include "stiva.h";
+//#include "exercitiiStiva.h";
+#include "coada.h";
 
 int main()
 {
@@ -189,8 +192,71 @@ int main()
 
     //sol36();
 
+    //sol37();
 
-    sol37();
+
+
+
+    //STIVA
+
+    /*Stiva s;
+
+    s.push(12);
+
+    s.push(100);
+
+    s.push(33);
+
+    s.push(8);
+
+    s.afisare();
+
+    s.pop();
+
+    s.pop();
+   
+    s.pop();
+
+    cout << endl;
+
+    s.afisare();*/
+
+    //sol1();
+    
+   /* Stiva x;
+
+    x.push(12);
+
+    cout<<x.isEmpty();*/
+
+    
+    Coada c;
+
+    c.push(1);
+
+    c.push(2);
+
+    c.push(3);
+
+    c.push(4);
+
+    c.afisare();
+
+    cout << endl;
+
+    c.pop();
+
+    c.afisare();
+
+
+
+
+
+
+
+
+
+    
 
     
 }
