@@ -208,5 +208,25 @@ struct Lista{
 
 		return this->head;
 	}
+
+
+	//todo functie ce returneaza node ul de pe o anumita pozitie
+
+	Node* nodePoz(int poz) {
+
+		int ct = 0;
+
+		Node* aux = head;
+
+		while (aux != NULL && ct != poz) {
+
+			aux = aux->next;
+
+			ct++;
+
+		}
+
+		return aux;
+	}
 						
 };

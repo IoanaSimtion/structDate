@@ -1,5 +1,7 @@
-#include "lista.h"
-#include "exercitii.h";
+//#include "lista.h"
+//#include "exercitii.h";
+//#include "tema.h";
+#include "exercitii2.h";
 
 int main()
 {
@@ -114,10 +116,11 @@ int main()
 
 
 
+    //EXERCITII
 
 
 
-    sol1();
+    //sol1();
 
     //cout << ePrim(7);
 
@@ -133,8 +136,61 @@ int main()
 
 
 
+    //TEMA
+
+    //sol2();
+
+    //cout << ePatratPerfect(cifrMijloc(1641));
+    
+    //cout << ePalindrom(1221);
+
+    //cout << cifraMinima(1243204);
+
+    //cout << cifrMijloc(101601);
+
+    //cout << ePatratPerfect(cifrMijloc(101601));
+
+    //cout << cmmdc(15884, 2);
+
+    //cout << cifreConsecutive(124);
+
+
+    //sol3(); 
+
+    //cout << desc2K(12, 2);
+
+    //descFactPrimi(12);
+
+    //cout << elemNou(1234);
 
 
 
 
+
+
+    //EXERCITII
+
+    //sol42();
+
+    //sol43();
+
+    //sol45();
+
+
+    //cout << cubPerfect(9);
+
+    //sol46();
+
+    //sol47();
+
+    
+     //cout << alipireCifre(-12, 32);
+
+
+    //sol36();
+
+
+    sol37();
+
+    
 }
