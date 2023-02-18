@@ -63,4 +63,17 @@ struct Coada {
 
 	}
 
+
+	bool isEmpty() {
+
+		if (top == NULL) {
+
+			return true;
+
+		}
+
+		return false;
+
+	}
+
 };
